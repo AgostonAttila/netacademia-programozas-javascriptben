@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fejléc</title>
+</head>
+<style>
+
+    td{
+        border: 1px solid black;
+    }
+
+    #alma {
+        background-color: red;
+    }
+
+    .sarga {
+        background-color: yellow;
+    }
+
+    .kek {
+
+        font-size: 30px;
+    }
+    
+    .sarga:hover {
+        background-color: red;
+    }
+
+    table {
+        width: 100px;
+        transition: width linear 2s;
+    }
+
+    /*table:hover {
+        width: 500px;
+        transition: width linear 2s;
+    }*/
+
+    .active {
+        width: 500px;
+        transition: width linear 2s;
+    }
+
+</style>
+
+
+<!--Elején lassítja-->
+<script>
+
+</script>
+
+<body>
+
+    <h1>Nagy</h1>
+    Kis Szöveg
+    <p>Kis szöveg</p>
+    <br />
+    <b>Vastag</b>
+    <br />
+    <i>Italic</i>
+    <br />
+    <b>Underline</b>
+
+    <pre>
+     Formázott szöveg
+     hehehee
+    </pre>
+
+
+    <label><input type="checkbox" /> szöveg</label>
+    <input id="radio" type="radio" /> 
+    <label for="radio">szöveg2</label>
+
+    <!--<table class="active" style="border: 1px solid black">-->
+    <table onclick="this.className = 'active'"; style="border: 1px solid black">
+        <tr>
+            <td>Alma</td>
+            <td>Korte</td>
+            <td>Dinnye</td>
+        </tr>
+        <tr>
+            <td>Alma</td>
+            <td class="sarga">Korte</td>
+            <td class="sarga kek">Dinnye</td>
+        </tr>
+    </table>
+    <!--Script végén manapság-->
+    <script>
+        alert("Hello vilag!!");
+
+
+        var szam = 5;
+        var szoveg = "szöveg";
+        var logikai = true;
+        var tomb = [0,1,2,3,4,"szoveg",234,true];
+        var object = {};
+        //undefined
+
+        //alma = 5;
+
+        //változó /változtatható
+        //typeof
+
+
+
+        function irdKi(uzenet)
+        {
+            alma2 = 20;
+            var korte = 20;
+            if (console) {
+                console.log(uzenet); //IE-n ha nincs F12 meghal
+            }
+
+            return alma2;// nem muszáj
+        }
+
+        var i = 0;
+        function ido()
+        {
+            var time = new Date();  // de adhatok hozzá időt is
+
+
+            var h = time.getHours();
+            var m = time.getMinutes();
+            var s = time.getSeconds();
+
+            var temp = h + ":" + m + ":" + s;
+
+            irdKi("Hello Vilag" + (i++)+"!" + temp);            
+            window.setTimeout(ido,1000);
+        }
+
+        
+        ido();
+
+        var interval = window.setInterval(ido, 1000);
+        //window.clearInterval(interval)
+
+        //Html
+
+        var elem = document.getElementById("alma");
+        elem.innerHTML = "körte";
+
+
+        function fuggveny()
+        {
+            gomb = ""; // nem szabad!!!!!!!!!!!!!!! globális lesz
+            windw.gomb2 = "valami"; //igy célszerű ha globálisan kell
+            var gomb3 = "asdadas"
+        }
+
+        fuggveny();
+        console.log(gomb2);
+        console.log(gomb3);
+
+
+        if(a=== b && (c==d || e ==f))
+        {
+        
+        
+        }
+        else if(a!== j){
+        
+        }
+        else{
+        
+        }
+
+
+            //irdKi("Hello Vilag!");
+       
+    </script>
+
+</body>
+</html>
